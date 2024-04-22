@@ -41,9 +41,9 @@ export default function AboutPage() {
             <span className={styles.monSpan}>Mon CV</span>
             </div>
           </Link>
-          <Image src="/images/profil.jpg" alt="" width={768} height={432} style={{display: slideToShow === 1 ? 'block' : 'none'}} />
-          <Image src="/images/profil2.gif" alt="" width={768} height={432} style={{display: slideToShow === 2 ? 'block' : 'none'}} />
-          <Image src="/images/profil4.gif" alt="" width={768} height={432} style={{display: slideToShow === 3 ? 'block' : 'none'}} />
+          <Image src="https://i.imgur.com/NvLxzbA.jpeg" alt="" width={768} height={432} style={{display: slideToShow === 1 ? 'block' : 'none'}} />
+          <Image src="https://i.imgur.com/HeOvBnG.gif" alt="" width={768} height={432} style={{display: slideToShow === 2 ? 'block' : 'none'}} />
+          <Image src="https://i.imgur.com/Ckzs3hP.gif" alt="" width={768} height={432} style={{display: slideToShow === 3 ? 'block' : 'none'}} />
           <div className={styles.sliderNav}>
             <a onClick={() => handleClick(1)}></a>
             <a onClick={() => handleClick(2)}></a>
