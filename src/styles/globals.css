@@ -1,0 +1,167 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    width: auto;
+    height: auto;
+}
+  
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* Une valeur élevée pour s'assurer que le menu est au-dessus des autres éléments */
+    margin-top: 5px;
+}
+  
+nav a {
+    margin-right: 10px;
+    text-decoration: none; 
+    /*color: gray; */
+    margin-top: 5px;
+}
+
+nav.dark {
+  /*background-color: #1a1a1a;*/
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px); /* Ajout de l'effet de flou */
+  color: white;
+}
+
+  
+ nav.light {
+  background-image: linear-gradient(45deg, white 0%, grey 100%);
+  /*background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(128, 128, 128, 0.5) 100%);*/
+  backdrop-filter: blur(2px); /* Ajout de l'effet de flou */
+  color: black;
+ }
+
+nav a:link, nav a:visited {
+  color: inherit; /* Hérite de la couleur du texte du parent */
+}
+
+button{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#Logo-Site {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+nav a:hover,
+nav a.active {
+    color: #e19808;
+    background-color: rgba(255, 255, 255, 0.2); /* Arrière-plan transparent */;
+    /*backdrop-filter: blur(2px); /* Ajout de l'effet de flou */
+    border: 4px solid rgba(255, 255, 255, 0.2); /* Ajout d'une bordure */
+    border-radius: 15px; /* Ajout du border-radius */
+    padding: 4px; /* Élargissement de la portée de l'arrière-plan */
+}
+
+h2 {
+  text-align: center;
+}
+
+.indexTitle span {
+  border-bottom: 2px solid #e19808;
+
+}
+
+.dark {
+    background-color: #1a1a1a;
+    color: white;
+}
+  
+.light {
+    /*background-color: #F7F7F7;*/
+    /*background-image: repeating-linear-gradient(45deg, white, grey 1px, white 1px);*/
+    background-image: linear-gradient(45deg, white 0%, grey 100%);
+    
+    color: black;
+}
+ 
+section {
+  height: 100vh;
+  padding-top: 50px; /* Adjust this value according to the height of your nav */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobil Screen */
+@media screen and (min-width: 380px) and (max-width: 600px) {
+
+    .toggle-btn {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      
+      /* Style pour l'icône de menu à trois bandes */
+      .toggle-btn:before {
+        content: "\2630"; /* Caractère Unicode pour l'icône de menu à trois bandes */
+        font-size: 20px;
+        color: white;
+      }
+      
+      .toggle-btn:hover ul {
+        display: block;
+      }
+      
+      .toggle-btn ul {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .toggle-btn ul li {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+     #Logo-Site {
+        display: none;
+    }
+}
+
+
+
+
+/*@media only screen and (max-width: 1200px) {
+  section, #project {
+    height: 66.5vh;
+
+}
+}*/
+
+@media (min-width: 601px) and (max-width: 800px) {
+  #Logo-Site {
+    transform: scale(0.5);
+    position: absolute;
+    left: 34%;
+  }
+}
+
+
+@media screen and (min-width: 380px) and (max-width: 1100px) {
+  section {
+    height: 100vh;
+    padding-top: 50px; /* Adjust this value according to the height of your nav */
+    padding-top: 50px; /* Adjust this value according to the height of your nav */
+    overflow-y: auto; /* Add this line */
+}
+}

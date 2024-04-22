@@ -1,0 +1,135 @@
+.container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sliderWrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    flex: 1;
+    margin-bottom: 70px;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.sliderNav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.sliderNav a{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: opacity ease 0.25s;
+}
+
+.sliderNav a:hover {
+    opacity: 1;
+}
+
+.textWrapper {
+    flex: 1;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.textWrapper p {
+    font-size: 1.5em;
+}
+
+.cvButton {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+.monSpan {
+    background-color: rgba(0, 0, 0, 0.2); /* Arrière-plan transparent */
+    backdrop-filter: blur(2px); /* Ajout de l'effet de flou */
+    border-radius: 5px;
+}
+
+
+.icon {
+    width: 15px !important;
+    height: auto !important;
+    animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(225, 152, 8, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(225, 152, 8, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 152, 8, 0);
+  }
+}
+
+
+
+
+@media screen and (min-width: 380px) and (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+        margin-top: auto;
+     
+      
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 550px) {
+    .sliderWrapper {
+       max-width: 340px;
+       max-height: 350px;
+       margin: auto; /* Center the sliderWrapper */
+    }
+}
+
+@media screen and (min-width:550px) and (max-width: 1100px) {
+    .sliderWrapper {
+       max-width: 98%
+    }
+}
+

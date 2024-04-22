@@ -1,0 +1,129 @@
+.ContactP {
+    /* max-width: 1080px;*/
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.iconLink {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    border: 7px solid #e19808;
+    border-radius: 50%;
+}
+
+.iconLink p {
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.iconLink p:hover {
+    color:#e19808;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.formContainer input, .formContainer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.formContainer input:hover {
+    border-color: #e19808;
+}
+
+
+.formContainer textarea:hover {
+    border-color: #e19808;
+}
+
+.formContainer button {
+    padding: 10px 20px;
+}
+
+.formContainer button:hover {
+    color:#e19808
+}
+
+/* écran mobile */
+@media (min-width: 380px) and (max-width: 490px) {
+    .iconContainer {
+        transform: scale(0.5);
+    }
+}
+
+@media (min-width: 490px) and (max-width: 692px) {
+    .iconContainer {
+        transform: scale(0.7);
+    }
+}
+
+
+
+/* écran mobile */
+@media (max-width: 800px) {
+   
+
+    .formContainer {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .formContainer input, .formContainer textarea {
+        font-size: 0.8em;
+    }
+
+    .formContainer button {
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1028px) {
+   
+
+    .formContainer {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .formContainer input, .formContainer textarea {
+        font-size: 0.8em;
+    }
+
+    .formContainer button {
+        font-size: 0.8em;
+    }
+}
+
+
+
+  

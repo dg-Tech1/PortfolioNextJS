@@ -1,0 +1,67 @@
+.canvasContainer {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  position: relative;
+}
+
+.myCanvas {
+  display: block;
+  /*background-color: #000;*/
+  height: 100vh;
+  width: 100%;
+}
+
+.bigBoldText {
+  font-size: 2em; /* Adjust size as needed */
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.blinkingText {
+  animation: blink 1s linear infinite;
+}
+
+.paragraph {
+  font-size: 2em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.theiconContainer {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; /* Ajustez cette valeur en fonction de l'espacement souhaité */
+}
+
+.theiconContainer a img:hover {
+  transform: scale(1.2); /* Ajustez cette valeur pour changer la taille de l'icône au survol */
+}
+
+/*.theiconContainer svg {
+  fill: rgba(255, 255, 255, 0.2);
+}*/
+
+

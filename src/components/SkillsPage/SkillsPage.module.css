@@ -1,0 +1,78 @@
+/*  src/components/SkillsPage/SkillsPage.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*height: 100vh;*/
+    min-height: 100vh; /* Change this line */
+    margin-top: 100px;
+  }
+  
+  .tagcloud--item {
+    padding: 2px 4px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 100px; /* Ajoutez cette ligne pour augmenter la taille du texte */
+  }
+  
+  .tagcloud--item:hover {
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid #333;
+    border-radius: 2px;
+    opacity: 1 !important;
+    z-index: 100 !important;
+  }
+
+
+ /* Début de FlmDesign */
+/* src/components/SkillsPage/SkillsPage.module.css */
+.containerX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ajoutez cette ligne pour centrer verticalement les images */
+}
+
+.test img {
+  width: 350px;
+  height: 250px;
+  transition: transform 0.5s ease; /* Corrigez la propriété de transition */
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+.test img:hover {
+  transform: scale(1.5);
+}
+
+
+
+@media screen and (min-width: 380px) and (max-width: 1100px) {
+  .test {
+    display: flex;
+    flex-direction: column; /* Affichez les images en colonne */
+    justify-content: center;
+    align-items: center; /* Ajoutez cette ligne pour centrer verticalement les images */
+  }
+
+  .test img {
+    display: none; /* Cachez toutes les images dans cette plage de taille */
+  }
+
+  /* Affichez seulement la première image */
+  .test img:first-of-type {
+    display: block;
+    width: 350px; /* Réduisez la largeur de 10 % */
+    height: 250px; /* Réduisez la hauteur de 10 % */
+    transition: transform 0.5s ease;
+    margin-bottom: 10px; /* Ajoutez un espacement entre les images */
+    border-radius: 15px;
+  }
+}
